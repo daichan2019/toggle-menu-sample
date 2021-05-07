@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ハンバーガーメニューサンプル</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="./assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="p-header">
+        <h1 class="p-header__logo">
+          <a href="">logo</a>
+        </h1>
+        <div class="p-header__nav-wrap">
+          <button
+            class="p-header__nav-open p-header__nav-toggle"
+            data-micromodal-trigger="js-header-nav"
+            role="button"
+          >
+            <img src="./assets/img/nav-open.png" alt="" />
+          </button>
+          <div
+            class="p-header__nav-visible"
+            id="js-header-nav"
+            aria-hidden="true"
+          >
+            <div class="p-header__nav-overlay" data-micromodal-close>
+              <nav class="p-header__nav">
+                <button
+                  class="p-header__nav-close p-header__nav-toggle"
+                  role="button"
+                >
+                  <img
+                    src="./assets/img/nav-close.png"
+                    data-micromodal-close
+                    alt=""
+                  />
+                </button>
+                <ul class="p-header__nav-list">
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">Information</a>
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">About</a>
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">Service</a>
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">Recruit</a>
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">Company</a>
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="" class="p-header__nav-link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

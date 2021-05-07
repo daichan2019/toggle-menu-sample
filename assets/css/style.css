@@ -1,0 +1,150 @@
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.l-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.p-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 96%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.p-header__logo {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.p-header__nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-header__nav-item:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+@media not all and (max-width: 1080px) {
+  .p-header__nav-open {
+    display: none;
+  }
+
+  .p-header__nav-close {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .p-header__nav-toggle {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+  .p-header__nav-visible {
+    display: none;
+  }
+
+  .p-header__nav-visible.is-open {
+    display: block;
+  }
+
+  .p-header__nav-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .p-header__nav {
+    background-color: #fff;
+    height: 100vh;
+    right: -240px;
+    position: absolute;
+    top: 0;
+    width: 240px;
+  }
+
+  .p-header__nav-list {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+
+  .p-header__nav-item {
+    margin: 0 auto;
+  }
+
+  .p-header__nav-item:not(:first-of-type) {
+    margin: 40px auto 0;
+  }
+
+  .p-header__nav-visible[aria-hidden="false"] .p-header__nav-overlay {
+    animation: fadeIn 300ms ease-in-out forwards;
+  }
+
+  .p-header__nav-visible[aria-hidden="false"] .p-header__nav {
+    animation: slideIn 300ms ease-in-out forwards;
+  }
+
+  .p-header__nav-visible[aria-hidden="true"] .p-header__nav-overlay {
+    animation: fadeOut 300ms ease-in-out forwards;
+  }
+
+  .p-header__nav-visible[aria-hidden="true"] .p-header__nav {
+    animation: slideOut 300ms ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -240px;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      right: 0;
+    }
+    to {
+      right: -240px;
+    }
+  }
+}
